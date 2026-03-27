@@ -58,7 +58,7 @@ public class ItemCard extends JPanel {
 
         g2d.setColor(Color.WHITE);
         g2d.setFont(new Font("SansSerif", Font.BOLD, 13));
-        g2d.drawString("$" + price, 25, 205);
+        g2d.drawString("ksh" + price, 25, 205);
 
         g2d.dispose();
     }
@@ -72,8 +72,8 @@ public class ItemCard extends JPanel {
             frame.getContentPane().setBackground(new Color(240, 240, 240));
             frame.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
 
-            frame.add(new ItemCard("Mechanical Keyboard", "99.99"));
-            frame.add(new ItemCard("Gaming Mouse", "49.99"));
+            frame.add(new ItemCard("Mechanical Keyboard", "99"));
+            frame.add(new ItemCard("Gaming Mouse", "49"));
             frame.add(new ItemCard("gaming mat", "100"));
 
             frame.setVisible(true);
