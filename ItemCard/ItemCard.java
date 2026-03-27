@@ -74,6 +74,7 @@ public class ItemCard extends JPanel {
 
             frame.add(new ItemCard("Mechanical Keyboard", "99.99"));
             frame.add(new ItemCard("Gaming Mouse", "49.99"));
+            frame.add(new ItemCard("gaming mat", "100"));
 
             frame.setVisible(true);
         });
