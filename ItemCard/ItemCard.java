@@ -1,4 +1,4 @@
-package ModernLogin.ItemCard;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,15 +8,17 @@ import java.awt.event.MouseEvent;
 public class ItemCard extends JPanel {
     private String itemName;
     private String price;
+    private String image;
     private boolean isHovered = false;
     
-    // MATCHING COLORS FROM YOUR LOGIN
+    // MATCHING COLORS FROM LOGIN
     private Color blue = new Color(52, 143, 235);
     private Color purple = new Color(110, 72, 170);
 
-    public ItemCard(String name, String price) {
+    public ItemCard(String name, String price,String image) {
         this.itemName = name;
         this.price = price;
+        this.image= image;
         setPreferredSize(new Dimension(180, 240));
         setOpaque(false);
         setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -51,7 +53,7 @@ public class ItemCard extends JPanel {
         g2d.setFont(new Font("SansSerif", Font.BOLD, 15));
         g2d.drawString(itemName, 15, 160);
 
-        // 5. PRICE BADGE (Uses your Login Gradient)
+        // 5. PRICE BADGE (Uses the Login Gradient)
         GradientPaint gp = new GradientPaint(0, 0, blue, getWidth(), 0, purple);
         g2d.setPaint(gp);
         g2d.fillRoundRect(15, 185, 70, 30, 10, 10);
@@ -72,9 +74,9 @@ public class ItemCard extends JPanel {
             frame.getContentPane().setBackground(new Color(240, 240, 240));
             frame.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
 
-            frame.add(new ItemCard("Mechanical Keyboard", " 99"));
-            frame.add(new ItemCard("Gaming Mouse", " 49"));
-            frame.add(new ItemCard("gaming mat", " 100"));
+            frame.add(new ItemCard("Mechanical Keyboard", " 99","res"));
+            frame.add(new ItemCard("Gaming Mouse", " 49","res"));
+            frame.add(new ItemCard("gaming mat", " 100","res"));
 
             frame.setVisible(true);
         });
