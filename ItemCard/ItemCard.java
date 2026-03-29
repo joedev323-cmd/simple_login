@@ -2,12 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.image.BufferedImage;
 
 public class ItemCard extends JPanel {
     private String itemName;
     private String price;
-    private Image productImg; // Store the actual image here
+    private Image productImg;  // image is stored here
     private boolean isHovered = false;
     
     private Color blue = new Color(52, 143, 235);
@@ -17,7 +16,7 @@ public class ItemCard extends JPanel {
         this.itemName = name;
         this.price = price;
         
-        // Load image from resources (ensure folder is named "images" in your src)
+        //loading the images from the dir.
         java.net.URL imgURL = getClass().getResource("/images/" + imageName + ".jpg"); 
         if (imgURL != null) {
             this.productImg = new ImageIcon(imgURL).getImage();
