@@ -16,7 +16,7 @@ public class ItemCard extends JPanel {
         this.itemName = name;
         this.price = price;
         
-        //loading the images from the dir.
+        //loading the images from the dir. here  you are not limited to type just change to desired eg png.
         java.net.URL imgURL = getClass().getResource("/images/" + imageName + ".jpg"); 
         if (imgURL != null) {
             this.productImg = new ImageIcon(imgURL).getImage();
@@ -84,10 +84,11 @@ public class ItemCard extends JPanel {
             frame.getContentPane().setBackground(new Color(230, 230, 235));
             frame.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 40));
 
-            // Ensure images like "keyboard.png" exist in your /images/ folder
+            // Ensure images like "keyboard.jpeg" exist in your /images/ folder
             frame.add(new ItemCard("Mechanical Keyboard", "900", "keyboard"));
-            frame.add(new ItemCard("Gaming Mouse", "1000", "mouse"));
+            frame.add(new ItemCard("Gaming Mouse", "1,000", "mouse"));
             frame.add(new ItemCard("Gaming Mat", "1,200", "mat"));
+            frame.add(new ItemCard("monitor","3,500","monitor"));
 
             frame.setVisible(true);
         });
